@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Gestión y Seguimiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        .form-header { text-align: center; margin-bottom: 30px; border-bottom: 1px solid #dee2e6; padding-bottom: 20px; }
+        .form-header img { max-width: 150px; }
+        h2, h3 { color: #005A9C; }
+        .form-section { margin-bottom: 40px; }
+        .checklist-item { padding: 15px; border: 1px solid #e9ecef; border-radius: 8px; margin-bottom: 15px; }
+        .form-check-label { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <img src="URL_DE_LA_IMAGEN_DE_TU_LOGO.png" alt="Logo Empresa">
+            <h2 class="mt-3">Formulario de Transferencia de Trabajo</h2>
+            <p class="text-muted">Gestión y Seguimientos</p>
+            <a href="URL_DE_TU_DOCUMENTO_PIE_DE_PAGINA" target="_blank" class="btn btn-outline-secondary mt-2">Consultar Documento de Referencia</a>
+        </div>
+
+        <form action="https://script.google.com/a/macros/interfuerza.com/s/AKfycbyFFyNTHwPd1U6u832fitaZXMS9LaaVUqOQnU_LcjvbX_zpehtJnpfk71kgh9BTgda0GA/exec" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-section">
+                <h3>1. Información General del Usuario</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="tipo_razon" class="form-label">Tipo de Razón</label>
+                        <select class="form-select" id="tipo_razon" name="tipo_razon" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Vacaciones">Vacaciones</option>
+                            <option value="Incapacidad">Incapacidad</option>
+                            <option value="Licencia">Licencia</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="fecha_visita" class="form-label">Fecha de Visita</label>
+                        <input type="date" class="form-control" id="fecha_visita" name="fecha_visita" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre_agente" class="form-label">Nombre del Agente</label>
+                    <input type="text" class="form-control" id="nombre_agente" name="nombre_agente" required>
+                </div>
+                <div class="mb-3">
+                    <label for="puesto_area" class="form-label">Puesto ó Área</label>
+                    <input type="text" class="form-control" id="puesto_area" name="puesto_area" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>2. Checklist de Temas a Transferir</h3>
+                <div class="alert alert-info">
+                    <h5 class="alert-heading">2.1 Tickets, ELCONIX, IFX, etc.</h5>
+                    <p>Accede al siguiente recurso para obtener más información sobre los procedimientos estándar.</p>
+                    <a href="URL_DE_TU_SCRIPT_O_DOCUMENTO_DE_SHEET" target="_blank" class="btn btn-info">Ir a Script de Procedimientos</a>
+                </div>
+                
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Inspección, verificación de todos los temas pendientes asignados</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_inspeccion" id="insp_si" value="Sí" required><label class="form-check-label" for="insp_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_inspeccion" id="insp_no" value="No"><label class="form-check-label" for="insp_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_inspeccion" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+                
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Documentar chats con Tickets abiertos y TCK asociados</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_chats" id="chat_si" value="Sí" required><label class="form-check-label" for="chat_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_chats" id="chat_no" value="No"><label class="form-check-label" for="chat_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_chats" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Documentar detalles de clientes tratados por llamadas telefónicas</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_llamadas" id="call_si" value="Sí" required><label class="form-check-label" for="call_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_llamadas" id="call_no" value="No"><label class="form-check-label" for="call_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_llamadas" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+                
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Confirmar permisos a los archivos en Drive</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_drive" id="drive_si" value="Sí" required><label class="form-check-label" for="drive_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_drive" id="drive_no" value="No"><label class="form-check-label" for="drive_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_drive" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Subir archivos locales de PC al Drive y compartirlas</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_archivos_pc" id="pc_si" value="Sí" required><label class="form-check-label" for="pc_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_archivos_pc" id="pc_no" value="No"><label class="form-check-label" for="pc_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_archivos_pc" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+
+                <div class="checklist-item">
+                    <label class="form-label fw-bold">Reenviar correos directos no copiados a soporte</label>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_correos" id="mail_si" value="Sí" required><label class="form-check-label" for="mail_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cumplimiento_correos" id="mail_no" value="No"><label class="form-check-label" for="mail_no">No</label>
+                        </div>
+                    </div>
+                    <input type="url" class="form-control form-control-sm" name="url_correos" placeholder="Pegar URL del documento de respaldo (opcional)">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>3. Documentos Oficiales y Declaración</h3>
+                <div class="mb-3">
+                    <label for="formulario900" class="form-label">Formulario 900 - Acción de Personal (vacaciones)</label>
+                    <input class="form-control" type="file" id="formulario900" name="formulario900" required>
+                </div>
+                <div class="border p-3 rounded">
+                    <p class="text-muted">Bajo el siguiente formato, complete los nombres para dar fe y garantizar el cumplimiento:</p>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Yo:</span>
+                        <input type="text" class="form-control" name="nombre_agente_declara" placeholder="Nombre del Agente" required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">doy fe a mi coordinador:</span>
+                        <input type="text" class="form-control" name="nombre_coordinador" placeholder="Nombre del Coordinador" required>
+                    </div>
+                    <div class="input-group mb-3">
+                         <span class="input-group-text">y Gerente:</span>
+                        <input type="text" class="form-control" name="nombre_gerente" placeholder="Nombre del Gerente" required>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Confirmado" id="confirmacion_declara" name="confirmacion_declara" required>
+                      <label class="form-check-label" for="confirmacion_declara">
+                        Doy fe que dejo mi puesto correctamente documentado.
+                      </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>4. Recomendaciones Finales</h3>
+                <div class="mb-3">
+                    <label for="recomendaciones" class="form-label">Recomendaciones a considerar por el agente</label>
+                    <textarea class="form-control" id="recomendaciones" name="recomendaciones" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="contacto_emergencia" class="form-label">Contacto de emergencia</label>
+                    <textarea class="form-control" id="contacto_emergencia" name="contacto_emergencia" rows="2"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 btn-lg">Enviar Formulario de Transferencia</button>
+        </form>
+    </div>
+</body>
+</html>
